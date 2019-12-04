@@ -1,0 +1,40 @@
+{
+
+    "testsiteurl":"http://www.way2automation.com/angularjs-protractor/banking/#/login",
+
+    "locators": {
+
+        "homepage":{
+            "buttonText": "Customer Login"
+           
+        },
+
+        "addCustomerDetailsPage": {
+
+
+            "addCustomerButton": "Add Customer",
+            "fName": "fName",
+            "lName": "lName",
+            "pCode": "postCd",
+            "addCustomer":"body > div.ng-scope > div > div.ng-scope > div > div.ng-scope > div > div > form > button",
+
+            "testdata":{
+
+                "fName": "Tarun",
+                "lName": "Kumar",
+                "pCode": "858585"
+            }
+
+
+
+
+        }
+    }
+
+
+
+
+
+
+
+}
