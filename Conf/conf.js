@@ -12,5 +12,5 @@ exports.config = {
 
     },
   //  seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['../test_spec/BankManagerLoginTest_spec.js','../test_spec/AddCustomerInfoTest_spec.js']
+    specs: ['../test_spec/BankManagerLoginTest_spec.js']
 }

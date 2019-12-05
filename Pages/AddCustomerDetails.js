@@ -4,16 +4,18 @@ let mySelect = new SelectWrapper(by.id('userSelect'))
 
 let myCurrency = new SelectWrapper(by.id('currency'))
 
+let OR = require('../json/OR.json')
+
 let AddCustomerDetails = function(){
 
     this.gotoAddCustomer = function() {
-        element(by.buttonText('Add Customer')).click()
+        element(by.buttonText(OR.locators.addCustomerDetailsPage.addCustomerButton)).click()
 
         return this
     }
 
     this.gotoOpenAccount = function() {
-        element(by.buttonText('Open Account')).click()
+        element(by.buttonText(OR.locators.addCustomerDetailsPage.openAccount)).click()
         return this
     }
 
@@ -23,10 +25,10 @@ let AddCustomerDetails = function(){
     }
 
     this.addCustomerInfo = function( fName, lName, postCode) {
-        element(by.model('fName')).sendKeys(fName)
-        element(by.model('lName')).sendKeys(lName)
-        element(by.model('postCd')).sendKeys(postCode)
-        element(by.css("body > div.ng-scope > div > div.ng-scope > div > div.ng-scope > div > div > form > button")).click()
+        element(by.model(OR.locators.addCustomerDetailsPage.fName)).sendKeys(fName)
+        element(by.model(OR.locators.addCustomerDetailsPage.lName)).sendKeys(lName)
+        element(by.model(OR.locators.addCustomerDetailsPage.pCode)).sendKeys(postCode)
+        element(by.css(OR.locators.addCustomerDetailsPage.addCustomer)).click()
         browser.sleep(1000)
         let alert = browser.switchTo().alert()
         alert.getText().then(function (text) {
@@ -35,6 +37,8 @@ let AddCustomerDetails = function(){
 
         alert.accept()
         browser.sleep(2000)
+
+        return this
     }
     this.openAccount = function(customer, currency) {
         mySelect.selectByText(customer)

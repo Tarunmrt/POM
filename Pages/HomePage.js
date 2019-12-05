@@ -1,3 +1,4 @@
+
 let HomePage = function(){
 
     this.loginAsCustomer = function(){
@@ -11,4 +12,4 @@ let HomePage = function(){
     }
 }
 
-module.exports = new HomePage;
+module.exports = new HomePage();

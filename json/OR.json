@@ -5,8 +5,8 @@
     "locators": {
 
         "homepage":{
-            "buttonText": "Customer Login"
-           
+            "buttonText": "Customer Login",
+             "mangerLogin" : "Bank Manager Login"
         },
 
         "addCustomerDetailsPage": {
@@ -17,6 +17,7 @@
             "lName": "lName",
             "pCode": "postCd",
             "addCustomer":"body > div.ng-scope > div > div.ng-scope > div > div.ng-scope > div > div > form > button",
+            "openAccount": "Open Account",
 
             "testdata":{
 
@@ -30,11 +31,6 @@
 
         }
     }
-
-
-
-
-
 
 
 }
