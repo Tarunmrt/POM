@@ -18,12 +18,18 @@
             "pCode": "postCd",
             "addCustomer":"body > div.ng-scope > div > div.ng-scope > div > div.ng-scope > div > div > form > button",
             "openAccount": "Open Account",
+            "process": "Process",
+            "search": "searchCustomer",
+            "customerName": "customer",
+            "myCurrency": "currency",
 
             "testdata":{
 
                 "fName": "Tarun",
                 "lName": "Kumar",
                 "pCode": "858585"
+             
+
             }
 
 

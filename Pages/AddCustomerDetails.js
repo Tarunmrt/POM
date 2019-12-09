@@ -41,20 +41,20 @@ let AddCustomerDetails = function(){
         return this
     }
     this.openAccount = function(customer, currency) {
-        mySelect.selectByText(customer)
-        myCurrency.selectByText(currency)
-        element(by.buttonText('Process')).click()
+        mySelect.selectByText(OR.locators.addCustomerDetailsPage.customerName)
+        myCurrency.selectByText( OR.locators.addCustomerDetailsPage.myCurrency)
+        element(by.buttonText(OR.locators.addCustomerDetailsPage.process)).click()
         browser.sleep(1000)
-        let alert = browser.switchTo().alert()
-        alert.getText().then(function (text) {
-            console.log(text);
-        })
+        // let alert = browser.switchTo().alert()
+        // alert.getText().then(function (text) {
+        //     console.log(text);
+        // })
 
-        alert.accept()
-        browser.sleep(2000)
+        // alert.accept()
+        // browser.sleep(2000)
     }
     this.validateCustomerRecords = function() {
-        element(by.model('searchCustomer')).sendKeys('Tarun')
+        element(by.model(OR.locators.addCustomerDetailsPage.search)).sendKeys(OR.locators.addCustomerDetailsPage.fName)
         browser.sleep(2000)
         let firstName = element(by.repeater('cust in Customers').row(0).column('cust.fName'))
         let name = firstName.getText()
